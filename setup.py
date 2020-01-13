@@ -15,7 +15,6 @@ setup(name='psf_ot_barycenter',
       packages=['psf_ot_barycenter'],
       install_requires=[
           'astropy',
-          'collections',
           'copy',
           'matplotlib',
           'numpy',
