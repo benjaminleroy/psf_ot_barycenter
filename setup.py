@@ -17,7 +17,7 @@ setup(name='psf_ot_barycenter',
           'astropy',
           'matplotlib',
           'numpy',
-          'PIL',
+          'pillow',
           're',
           'scipy'
       ],
