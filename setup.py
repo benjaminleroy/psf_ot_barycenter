@@ -14,7 +14,7 @@ setup(name='psf_ot_barycenter',
       license='MIT',
       packages=['psf_ot_barycenter'],
       install_requires=[
-          'astropy.io',
+          'astropy',
           'collections',
           'copy',
           'matplotlib',
