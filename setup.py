@@ -18,7 +18,6 @@ setup(name='psf_ot_barycenter',
           'matplotlib',
           'numpy',
           'pillow',
-          're',
           'scipy'
       ],
       test_suite='nose.collector',
