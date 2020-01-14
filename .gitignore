@@ -133,4 +133,5 @@ dmypy.json
 
 # my additions
 main/data/*
+main/images/*
 .DS_Store

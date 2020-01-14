@@ -8,7 +8,6 @@ import sklearn
 from sklearn.ensemble import RandomForestRegressor
 from collections import Counter
 import sys, os
-import nose
 from astropy.io import fits
 import re
 from PIL import Image
@@ -16,6 +15,7 @@ import PIL
 import matplotlib.pyplot as plt
 import copy
 import scipy.ndimage.measurements
+import progressbar
 
 import psf_ot_barycenter
 
@@ -49,5 +49,25 @@ i_summary = pd.read_csv(summary_file, sep = "\s+",
                         header=None,
                         names = column_names)
 
+i_summary.to_csv(data_loc + "hrci_arclac_info.csv")
+#
 
-# ...
+# for knum, key in enumerate(i_summary.ObsID):
+#     plt.imshow(i_mat_dict[key])
+#     print(i_summary.iloc[knum])
+#     a = input("q to quit")
+#     plt.close()
+#     if a == "q":
+#         break
+
+bar = progressbar.ProgressBar()
+
+for idx, key in bar(list(enumerate(i_mat_dict.keys()))):
+    fig, ax = plt.subplots()
+    ax.imshow(i_mat_dict[key], cmap = "binary")
+    ax.set_title(key)
+    plt.savefig("images/" + str(key) + "_new_image.png")
+
+    plt.close()
+    #print(idx)
+
