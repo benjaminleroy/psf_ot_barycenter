@@ -23,6 +23,8 @@ We present the new data below. \@Chad, you'll need to run `main/eda_new_data.py`
 
 The below figure plots `Xcen` and `Ycen`, specifically doing `x = Ycen, y = -Xcen`. 
 
+I (Ben) am currently not sure what the "azimuth" rotation is - it does look like some images are rotationed differently than I'd expect (for example - zoom in on the 4 point with coords (`14,000`, `17,500`) - they don't all have the same orientation).
+
 ```{r message = F, warning  = F}
 data_vis <- read_csv("data/hrci_arclac_info.csv") %>%
   select(-X1)
